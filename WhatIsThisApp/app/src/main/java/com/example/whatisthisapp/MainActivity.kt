@@ -2,6 +2,7 @@ package com.example.whatisthisapp
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,14 +12,15 @@ import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var etName: EditText
+    private lateinit var sharedPreferences: SharedPreferences
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         //Splash Screen
-        Thread.sleep(3000)
+        Thread.sleep(1000)
         installSplashScreen()
 
        // setContentView(R.layout.activity_main)
@@ -31,15 +33,20 @@ class MainActivity : AppCompatActivity() {
          val btnContinue: Button = findViewById<Button>(R.id.btn_continue)
          val etName = findViewById<EditText>(R.id.et_name)
 
-        btnContinue.setOnClickListener {
+        // Initialize SharedPreferences
+        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
 
-            if (etName.text.toString().isEmpty()) {
-                Toast.makeText(this,"Please enter your name", Toast.LENGTH_SHORT).show()
-            } else {
-                val intent: Intent = Intent(this, QuizSettings::class.java)
-                startActivity(intent)
-                finish()
-            }
+        btnContinue.setOnClickListener {
+            val name = etName.text.toString()
+
+            // Save the user name in SharedPreferences
+            val editor = sharedPreferences.edit()
+            editor.putString("userName", name)
+            editor.apply()
+
+            // Start the WelcomeActivity
+            val intent = Intent(this, HomeScreen::class.java)
+            startActivity(intent)
         }
 
     }
