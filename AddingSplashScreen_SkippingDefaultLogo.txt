@@ -1,0 +1,15 @@
+Adding Splash Screen 
+
+1. Add the splaslogo under res/drawable
+2. Modify android manifest and add below under the Activity of MainActivity
+	* android:theme="@style/Theme.App.SplashScreen">
+3. In Gradle:app , add this  - implementation "androidx.core:core-splashscreen:1.0.0"
+4. in MainActivity.kt , add below 
+	*  Thread.sleep(1500)
+        *  installSplashScreen()
+5. under res/values/themes/themes.xml , add below
+	<style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        	<item name="windowSplashScreenBackground">@color/white</item>
+        	<item name="windowSplashScreenAnimatedIcon">@drawable/splashlogo_nobg</item>
+        	<item name="postSplashScreenTheme">@style/Base.Theme.MyApp2</item>
+    	</style>
