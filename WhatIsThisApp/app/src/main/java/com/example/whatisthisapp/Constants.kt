@@ -31,7 +31,7 @@ package com.example.whatisthisapp
             )
 
             // add to questionList Array
-            questionList.add(q1)
+            questionList.add(q2)
 
             val q3 = Question(
                 id = 3,
@@ -45,7 +45,7 @@ package com.example.whatisthisapp
             )
 
             // add to questionList Array
-            questionList.add(q1)
+            questionList.add(q3)
 
             val q4 = Question(
                 id = 4,
@@ -59,7 +59,7 @@ package com.example.whatisthisapp
             )
 
             // add to questionList Array
-            questionList.add(q1)
+            questionList.add(q4)
 
             return questionList
         }

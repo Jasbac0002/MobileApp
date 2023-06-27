@@ -18,9 +18,7 @@ class QuizSettings : AppCompatActivity() {
         val btnBack: Button = findViewById<Button>(R.id.btn_quizsettings_back)
 
         btnBack.setOnClickListener{
-            val intent = Intent(this, HomeScreen::class.java)
-            startActivity(intent)
-            finish() // Optional: finish the current activity to remove it from the back stack
+            onBackPressed()
         }
     }
 }

@@ -7,11 +7,16 @@
     tools:context=".AboutApp">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/myTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="About App"
-        android:gravity="center"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_appinfo_back"
@@ -28,5 +33,12 @@
             android:background="@drawable/button_custom"
             android:textColor="@color/white"/>
 
+    <WebView
+        android:id="@+id/wv_website"
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView"
+        android:layout_marginTop="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

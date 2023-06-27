@@ -23,7 +23,7 @@ class QuizQuestionsActivity : AppCompatActivity() {
         setContentView(R.layout.quiz_questions)
 
         val questionsList = Constants.getQuestions()
-        Log.e("Questions Size", "${questionsList.size}")
+        //Log.e("Questions Size", "${questionsList.size}")
         for (i in questionsList) {
             Log.e("Questions", i.question)
         }

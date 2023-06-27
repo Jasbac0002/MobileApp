@@ -6,8 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".AboutDeveloper">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About the Developer"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jasper P. Bacani"
+        android:textColor="@color/light_gray"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="120dp"/>
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_appdev_back"
+        android:id="@+id/btn_browse"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Browse Website"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/light_gray"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="120dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_appinfo_back"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -21,11 +58,120 @@
         android:background="@drawable/button_custom"
         android:textColor="@color/white"/>
 
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="About Developer"
-        android:gravity="center"
-        android:textSize="25sp"/>
+        android:gravity="center_horizontal"
+        >
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="43dp">
+
+            <!-- First row -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/labelMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile :"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:id="@+id/mobileNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="022333444"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView></TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_callme"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Call Me!"
+                    android:padding="8dp"
+                    android:background="@drawable/button_custom"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="30dp"/>
+            </TableRow>
+
+            <!-- Second row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Email :"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jaba008@ess.ais.ac.nz"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView></TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_email_me"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email Me!"
+                    android:padding="8dp"
+                    android:background="@drawable/button_custom"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="30dp"/>
+            </TableRow>
+
+            <!-- Third row -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address :"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28a Linwood Avenue,"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mt Albert, Auckland"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView></TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_locateme"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Locate Me via Google Maps"
+                    android:background="@drawable/button_custom"
+                    android:padding="8dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
