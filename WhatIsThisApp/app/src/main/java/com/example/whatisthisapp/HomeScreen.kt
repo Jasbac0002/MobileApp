@@ -8,19 +8,15 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.Manifest
-import android.content.pm.PackageManager
-import android.net.Uri
-import android.provider.MediaStore
-import android.view.View.OnLongClickListener
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import android.widget.Toast
+
 
 class HomeScreen : AppCompatActivity() {
     private lateinit var tvName: TextView
     private lateinit var sharedPreferences: SharedPreferences
 
     private lateinit var imageView: ImageView
+
 
     companion object {
         val IMAGE_REQUEST_CODE = 100;
@@ -42,6 +38,7 @@ class HomeScreen : AppCompatActivity() {
         val btnQuizSettings: Button = findViewById<Button>(R.id.btn_quiz_settings)
         val btnAppDeveloper: Button = findViewById<Button>(R.id.btn_app_developer)
         imageView = findViewById(R.id.iv_avatar)
+        tvName.setOnLongClickListener(longClickListener)
 
 
         // Initialize SharedPreferences
@@ -84,4 +81,17 @@ class HomeScreen : AppCompatActivity() {
             imageView.setImageURI(data?.data)
         }
     }
+    private val longClickListener = View.OnLongClickListener {
+        if (it.id == R.id.tv_name) {
+            showToast("Hello, LongClick Pressed!")
+            true
+        } else {
+            false
+        }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
 }
