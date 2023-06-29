@@ -1,6 +1,7 @@
 package com.example.whatisthisapp
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.whatisthisapp.databinding.ActivityGoogleMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -25,6 +26,12 @@ class GoogleMaps : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        val btnBack: Button = findViewById<Button>(R.id.btn_googlemapsBack)
+
+        btnBack.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     /**

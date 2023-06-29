@@ -1,44 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
     tools:context=".QuizSettings">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Settings"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Select Category : "
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="231dp"
+            android:checkedButton="@id/rbButton1">
+
+            <RadioButton
+                android:id="@+id/rbButton1"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Fruits"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="262dp"
+                android:layout_marginTop="20dp"/>
+
+            <RadioButton
+                android:id="@+id/rbButton2"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:text="Animals"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="262dp" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_BeginQuiz"
+            android:layout_marginTop="260dp"
+            android:layout_marginLeft="115dp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Begin Quiz"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_custom"
+            android:backgroundTint="#76C3BC"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_quizsettings_back"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="150dp"
         android:gravity="center"
         android:text="Back"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="50dp"
         android:background="@drawable/button_custom"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white">
+
+    </androidx.appcompat.widget.AppCompatButton>
 
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Quiz Settings"
-            android:gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_marginTop="20dp">
-        </androidx.appcompat.widget.AppCompatTextView>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

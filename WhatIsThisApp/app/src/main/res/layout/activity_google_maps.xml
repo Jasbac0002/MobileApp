@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="50dp"
-    android:layout_marginTop="50dp"
-    tools:context=".GoogleMaps"/>
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_googlemapsBack"
+        android:layout_marginTop="50dp"
+        tools:context=".GoogleMaps" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_googlemapsBack"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:text="Back"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/button_custom"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
