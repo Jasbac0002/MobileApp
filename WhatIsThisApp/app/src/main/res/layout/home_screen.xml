@@ -52,6 +52,7 @@
             android:scaleType="centerCrop"
             android:background="@drawable/round_background"/>
 
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_quiz_settings"
             android:layout_width="match_parent"
@@ -86,6 +87,7 @@
             android:textColor="@color/white"
             android:text="App Developer"
             android:textSize="20sp" />
+
 
 
 

@@ -9,19 +9,15 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import android.content.Context
+import android.view.inputmethod.InputMethodManager
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var etName: EditText
     private lateinit var sharedPreferences: SharedPreferences
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //Splash Screen
-        Thread.sleep(2000)
-        //installSplashScreen()
 
        // setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
@@ -30,25 +26,48 @@ class MainActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         //Declaring variables
-         val btnContinue: Button = findViewById<Button>(R.id.btn_continue)
+         val btnContinue: Button = findViewById(R.id.btn_continue)
          val etName = findViewById<EditText>(R.id.et_name)
+
+        val rootView = findViewById<View>(android.R.id.content)
+        rootView.setOnClickListener {
+            hideKeyboard()
+        }
 
         // Initialize SharedPreferences
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
 
         btnContinue.setOnClickListener {
-            val name = etName.text.toString()
+            val name = etName.text.toString().trim() // Trim the input to remove leading/trailing whitespace
 
-            // Save the user name in SharedPreferences
-            val editor = sharedPreferences.edit()
-            editor.putString("userName", name)
-            editor.apply()
+            if (name.isEmpty()) {
+                Toast.makeText(this, "Your name Please :)", Toast.LENGTH_SHORT).show()
+            } else {
+                // Save the user name in SharedPreferences
+                val editor = sharedPreferences.edit()
+                editor.putString("userName", name)
+                editor.apply()
 
-            // Start the WelcomeActivity
-            val intent = Intent(this, HomeScreen::class.java)
-            startActivity(intent)
+                // Start the WelcomeActivity
+                val intent = Intent(this, HomeScreen::class.java)
+                startActivity(intent)
+            }
         }
 
+
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        val currentFocusedView = currentFocus
+        if (currentFocusedView != null) {
+            inputMethodManager.hideSoftInputFromWindow(
+                currentFocusedView.windowToken,
+                InputMethodManager.HIDE_NOT_ALWAYS
+            )
+        }
     }
 
 

@@ -37,6 +37,9 @@ class QuizActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Hide Status bars and Make it Full Screen
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         setContentView(R.layout.quiz_activity)
 
         supportActionBar?.hide()
@@ -177,7 +180,7 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun countdown() {
-        var duration: Long = TimeUnit.SECONDS.toMillis(5)
+        var duration: Long = TimeUnit.SECONDS.toMillis(10)
 
 
         object : CountDownTimer(duration, 1000) {

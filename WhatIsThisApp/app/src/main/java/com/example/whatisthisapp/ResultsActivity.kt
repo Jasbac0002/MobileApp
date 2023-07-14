@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.system.exitProcess
 
@@ -40,28 +41,24 @@ class ResultsActivity : AppCompatActivity() {
 
         val percentage= (correctAnsNo?.toFloat()?.div(totalAnsNo?.toFloat()!!))?.times(100)
 
-        if (percentage != null) {
-            when {
-                50 <= percentage && percentage <= 99 -> {
+        if (percentage != null) when {
+            50 <= percentage && percentage <= 99 -> {
 
-                    performance.text = "GOOD"
-                    output.background = resources.getDrawable(R.drawable.option_bg)
+                performance.text = "You're Getting There!"
+                output.background = resources.getDrawable(R.drawable.option_bg)
 
 
-                }
-
-                percentage >= 100 -> {
-                    performance.text = "EXCELLENT"
-                    output.background = resources.getDrawable(R.drawable.right_bg)
-                }
-
-                percentage < 50 -> {
-                    performance.text = "POOR"
-                    output.background = resources.getDrawable(R.drawable.wrong_bg)
-                }
             }
 
+            percentage >= 100 -> {
+                performance.text = "Perfect! Your Awesome!"
+                output.background = resources.getDrawable(R.drawable.right_bg)
+            }
 
+            percentage < 50 -> {
+                performance.text = "Just Need More Practice :)"
+                output.background = resources.getDrawable(R.drawable.wrong_bg)
+            }
         }
 
         val btnPlayAgain: Button = findViewById<Button>(R.id.btnPlayAgain)
@@ -72,6 +69,8 @@ class ResultsActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnExit.setOnClickListener{
+
+            Toast.makeText(this, "Thank You! For Playing my App!\n" + "-Jasper Bacani", Toast.LENGTH_SHORT).show()
             finishAffinity()
             exitProcess(0)
         }
