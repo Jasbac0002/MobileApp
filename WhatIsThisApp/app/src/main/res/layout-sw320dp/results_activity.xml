@@ -8,13 +8,9 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
         app:cardCornerRadius="25dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="200dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,21 +20,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="25dp"
             android:text="Your Results :)"
             android:textColor="@color/black"
-            android:textSize="45sp"
-            android:textStyle="bold">
-
-        </TextView>
+            android:textSize="25sp"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:id="@+id/output"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="250dp"
-            android:layout_marginRight="25dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/option_bg"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
@@ -49,9 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="05"
                 android:textColor="@color/black"
-                android:textSize="75dp">
-
-            </TextView>
+                android:textSize="55dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -59,10 +52,8 @@
                 android:padding="5dp"
                 android:text="/"
                 android:textColor="@color/black"
-                android:textSize="75dp"
-                android:textStyle="bold">
-
-            </TextView>
+                android:textSize="55dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/totalAns"
@@ -70,9 +61,7 @@
                 android:layout_height="wrap_content"
                 android:text="05"
                 android:textColor="@color/black"
-                android:textSize="75dp">
-
-            </TextView>
+                android:textSize="55dp" />
         </LinearLayout>
 
         <TextView
@@ -80,33 +69,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="160dp"
             android:text="PERFORMANCE"
             android:textColor="@color/black"
-            android:textSize="45sp"
-            android:textStyle="bold|italic">
-
-        </TextView>
+            android:textSize="20sp"
+            android:textStyle="bold|italic"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnPlayAgain"
-            android:layout_width="175dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="600dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="80dp"
             android:background="@drawable/button_custom"
             android:text="Play Again ?"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.9"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnExitGame"
-            android:layout_width="175dp"
-            android:layout_height="70dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/button_custom"
             android:text="Exit"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.8"/>
 
     </androidx.cardview.widget.CardView>
 

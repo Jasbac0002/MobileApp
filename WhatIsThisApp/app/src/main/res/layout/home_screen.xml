@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,49 +8,60 @@
     android:background="#FEFEFE">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Kia Ora and Welcome"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
+        android:id="@+id/textView4"
+        android:layout_width="314dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:layout_marginBottom="640dp"/>
+        android:text="Kia Ora and Welcome"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
         android:text="Username"
         android:textColor="@color/light_gray"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center"
-        android:layout_marginBottom="600dp"/>
-
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="381dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:layout_marginTop="70dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name">
 
         <ImageView
             android:id="@+id/iv_avatar"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/default_avatar"
+            android:background="@drawable/round_background"
             android:scaleType="centerCrop"
-            android:background="@drawable/round_background"/>
+            app:srcCompat="@drawable/default_avatar" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_quiz_settings"
@@ -58,11 +69,11 @@
             android:layout_height="70dp"
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="25dp"
             android:background="@drawable/button_custom"
             android:text="Quiz Settings"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="13sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_app_info"
@@ -71,25 +82,24 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:background="@drawable/button_custom"
-            android:textColor="@color/white"
             android:text="App Info"
-            android:textSize="20sp" />
+            android:textColor="@color/white"
+            android:textSize="13sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_app_developer"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginStart="100dp"
+            android:layout_marginTop="25dp"
             android:layout_marginEnd="100dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/button_custom"
-            android:textColor="@color/white"
             android:text="App Developer"
-            android:textSize="20sp" />
+            android:textColor="@color/white"
+            android:textSize="13sp" />
 
 
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.appcompat.widget.LinearLayoutCompat
-        >
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

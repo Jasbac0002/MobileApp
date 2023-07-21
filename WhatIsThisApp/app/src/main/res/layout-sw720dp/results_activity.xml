@@ -93,7 +93,7 @@
             android:layout_width="175dp"
             android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="550dp"
             android:background="@drawable/button_custom"
             android:text="Play Again ?"
             android:textColor="@color/white" />

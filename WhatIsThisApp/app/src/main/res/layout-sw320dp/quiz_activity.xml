@@ -11,10 +11,10 @@
         android:id="@+id/cardView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,22 +26,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:text="What is this?"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold">
 
         </TextView>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/questionImage"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_marginTop="200dp"
+            android:layout_width="274dp"
+            android:layout_height="93dp"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/placeholder_image"
-            app:layout_constraintBottom_toBottomOf="@+id/qtn">
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/qtn"
+            app:srcCompat="@drawable/placeholder_image">
 
         </androidx.appcompat.widget.AppCompatImageView>
 
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="145dp"
             android:drawableTop="@drawable/ic_baseline_timer_24"
             android:text="00:15"
             android:textSize="20sp"
@@ -65,35 +65,43 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="230dp"
             android:layout_marginEnd="40dp"
             android:background="@drawable/option_bg"
             android:enabled="true"
             android:onClick="option1Clicked"
             android:text="option1"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@id/option2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/countdown" />
 
         <android.widget.Button
             android:id="@+id/option2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="700dp"
+            android:layout_marginTop="290dp"
             android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/option_bg"
             android:onClick="option2Clicked"
             android:text="option2"
             android:textColor="@color/black"
-            android:textSize="20dp" />
-
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@id/option3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option1" />
 
         <android.widget.Button
             android:id="@+id/option3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="800dp"
+            android:layout_marginTop="350dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="40dp"
             android:background="@drawable/option_bg"
@@ -101,20 +109,29 @@
             android:onClick="option3Clicked"
             android:text="option3"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@id/option4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option2" />
+
 
         <android.widget.Button
             android:id="@+id/option4"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="900dp"
+            android:layout_marginTop="410dp"
             android:layout_marginEnd="40dp"
             android:background="@drawable/option_bg"
             android:onClick="option4Clicked"
             android:text="option4"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option3" />
 
 
     </androidx.cardview.widget.CardView>

@@ -15,10 +15,9 @@
         android:layout_height="wrap_content"
         android:text="What Is This Quiz App"
         android:layout_marginBottom="30dp"
-        android:textSize="28sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-
         />
 
     <androidx.cardview.widget.CardView
@@ -41,23 +40,15 @@
                 android:gravity="center"
                 android:text="Kia Ora!"
                 android:textColor="@color/dark_gray"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Enter Your Name : "
-                android:textColor="@color/white"
-                android:textSize="15sp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
@@ -76,8 +67,10 @@
                 android:background="@drawable/button_custom"
                 android:text="Continue"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
+
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 
