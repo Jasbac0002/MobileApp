@@ -1,9 +1,10 @@
 package com.example.whatisthisapp
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.whatisthisapp.databinding.ActivityGoogleMapsBinding
+import com.example.whatisthisapp.databinding.GoogleMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -14,12 +15,15 @@ import com.google.android.gms.maps.model.MarkerOptions
 class GoogleMaps : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-    private lateinit var binding: ActivityGoogleMapsBinding
+    private lateinit var binding: GoogleMapsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityGoogleMapsBinding.inflate(layoutInflater)
+        //Hide Status bars and Make it Full Screen
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
+        binding = GoogleMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.

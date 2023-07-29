@@ -5,9 +5,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class AboutDeveloper : AppCompatActivity() {
+
+    private lateinit var dataManager: DataManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,6 +24,14 @@ class AboutDeveloper : AppCompatActivity() {
         val btnEmailMe: Button = findViewById<Button>(R.id.btn_email_me)
         val btnLocateMe: Button = findViewById<Button>(R.id.btn_locateme)
         val btnBrowse: Button = findViewById<Button>(R.id.btn_browse)
+        val tvDevelopers: TextView = findViewById<Button>(R.id.tvDevelopers)
+
+
+
+        dataManager = DataManager(this)
+        // Query all names and display them in the TextView
+        val allNames = dataManager.getAllNames()
+        tvDevelopers.text = "Developed by: \n\n" + allNames.joinToString("\n")
 
         btnBack.setOnClickListener{
             onBackPressed()

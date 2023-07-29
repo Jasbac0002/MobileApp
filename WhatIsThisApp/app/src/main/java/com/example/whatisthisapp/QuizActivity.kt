@@ -65,28 +65,28 @@ class QuizActivity : AppCompatActivity() {
                 QuestionModel(
                     R.drawable.fruits_kiwi,
                     "KiwiFruit",
-                    "Banana",
-                    "Pineapple",
-                    "Mango",
+                    "Atis",
+                    "IndianMango",
+                    "Babana",
                     "KiwiFruit"
                 )
             )
             questionsList.add(
                 QuestionModel(
                     R.drawable.fruits_feijoa,
-                    "Persimmon",
-                    "Quince",
+                    "Peras",
+                    "Santol",
                     "Feijoa",
-                    "Kiwano",
+                    "Bayabas",
                     "Feijoa"
                 )
             )
             questionsList.add(
                 QuestionModel(
                     R.drawable.fruits_boysenberry,
-                    "Grapes",
-                    "Dates",
-                    "BlackCurrant",
+                    "Ubas",
+                    "Seresa",
+                    "Duhat",
                     "Boysenberry",
                     "Boysenberry"
                 )
@@ -94,9 +94,9 @@ class QuizActivity : AppCompatActivity() {
             questionsList.add(
                 QuestionModel(
                     R.drawable.fruits_tamarillo,
-                    "Plum",
-                    "RedBellPepper",
-                    "PassionFruit",
+                    "Kamatis",
+                    "Siling Pula",
+                    "Manggustin",
                     "Tamarillo",
                     "Tamarillo"
                 )
@@ -104,9 +104,9 @@ class QuizActivity : AppCompatActivity() {
             questionsList.add(
                 QuestionModel(
                     R.drawable.fruit_persimmon,
-                    "Orange",
+                    "Suha",
                     "Persimmon",
-                    "Tomato",
+                    "Kahel",
                     "GrapeFruit",
                     "Persimmon"
                 )
@@ -180,7 +180,8 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun countdown() {
-        var duration: Long = TimeUnit.SECONDS.toMillis(10)
+        //Set Timer , 10 for 10seconds
+        var duration: Long = TimeUnit.SECONDS.toMillis(3)
 
 
         object : CountDownTimer(duration, 1000) {

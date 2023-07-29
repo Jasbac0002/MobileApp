@@ -7,98 +7,256 @@
     android:background="@drawable/gradient_bg"
     tools:context=".QuizSettings">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quiz Settings"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_gravity="center_horizontal"/>
-
-
-    <androidx.cardview.widget.CardView
+    <LinearLayout
+        android:id="@+id/LinearQuizSettings"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="150dp"
-        android:background="@android:color/white"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/tvQuizSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz Settings"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/LinearQuizSettings"
+        android:layout_marginTop="20dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardViewGroup"
+            android:layout_width="350dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="100dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvPlayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Hello! Player Name"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Which category do you like?"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_gravity="center_horizontal" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="80dp"
+                android:background="@android:color/transparent"
+                android:checkedButton="@id/rbButton1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:textColor="@color/black">
+
+                <RadioButton
+                    android:id="@+id/rbButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Fruits"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rbButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Animals"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="93dp"
+                    tools:layout_editor_absoluteY="262dp" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_BeginQuiz"
+                android:layout_marginTop="200dp"
+                android:layout_marginLeft="115dp"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Begin Quiz"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/button_custom"
+                android:textColor="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/RSS_VideoLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="390dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Which category do you like?"
+            android:text="Check RSS and Our Video!"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:layout_gravity="center_horizontal"/>
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginBottom="231dp"
-            android:checkedButton="@id/rbButton1">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rssAndGoogleCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="425dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
 
-            <RadioButton
-                android:id="@+id/rbButton1"
-                android:layout_width="136dp"
-                android:layout_height="wrap_content"
-                android:text="Fruits"
-                android:textStyle="bold"
-                android:textSize="25sp"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="262dp"
-                android:layout_marginTop="20dp"/>
-
-            <RadioButton
-                android:id="@+id/rbButton2"
-                android:layout_width="131dp"
-                android:layout_height="wrap_content"
-                android:text="Animals"
-                android:textStyle="bold"
-                android:textSize="25sp"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="262dp" />
-
-        </RadioGroup>
-
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/rssImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="70dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/rss">
+        </androidx.appcompat.widget.AppCompatImageView>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/playVideoImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/playvideo">
+        </androidx.appcompat.widget.AppCompatImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/CalendarEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="485dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_BeginQuiz"
-            android:layout_marginTop="260dp"
-            android:layout_marginLeft="115dp"
-            android:layout_width="130dp"
+            android:id="@+id/btn_addQuizEventCalendar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Begin Quiz"
+            android:text=" Add Game Event in Calendar "
             android:textSize="18sp"
             android:textStyle="bold"
             android:background="@drawable/button_custom"
-            android:backgroundTint="#76C3BC"
-            android:textColor="@color/black"/>
-    </androidx.cardview.widget.CardView>
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/LikeUsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="550dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like us? Please Share!"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal" />
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/SocialImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="590dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fbImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/fb"
+            android:layout_marginRight="20dp">
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/instaImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/insta">
+        </androidx.appcompat.widget.AppCompatImageView>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/twitterImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/twitter">
+        </androidx.appcompat.widget.AppCompatImageView>
+
+    </LinearLayout>
+
+    <!-- Back Button (outside LinearLayout) -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_quizsettings_back"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:layout_marginLeft="150dp"
-        android:gravity="center"
         android:text="Back"
         android:textSize="18sp"
         android:textStyle="bold"
         android:background="@drawable/button_custom"
-        android:textColor="@color/white">
-
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp">
     </androidx.appcompat.widget.AppCompatButton>
 
 

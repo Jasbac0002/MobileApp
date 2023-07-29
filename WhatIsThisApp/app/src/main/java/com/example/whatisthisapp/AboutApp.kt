@@ -1,7 +1,6 @@
 package com.example.whatisthisapp
 
-import android.content.Intent
-import android.net.Uri
+
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
@@ -12,7 +11,6 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 
 class AboutApp : AppCompatActivity() {
 

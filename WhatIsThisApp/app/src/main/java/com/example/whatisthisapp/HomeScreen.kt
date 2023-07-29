@@ -1,7 +1,6 @@
 package com.example.whatisthisapp
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,17 +8,18 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 
 class HomeScreen : AppCompatActivity() {
     private lateinit var tvName: TextView
-    private lateinit var sharedPreferences: SharedPreferences
-
     private lateinit var imageView: ImageView
+
+    private lateinit var auth: FirebaseAuth
 
 
     companion object {
-        val IMAGE_REQUEST_CODE = 100;
+        const val IMAGE_REQUEST_CODE = 100;
     }
 
 
@@ -37,18 +37,14 @@ class HomeScreen : AppCompatActivity() {
         val btnAppInfo: Button = findViewById<Button>(R.id.btn_app_info)
         val btnQuizSettings: Button = findViewById<Button>(R.id.btn_quiz_settings)
         val btnAppDeveloper: Button = findViewById<Button>(R.id.btn_app_developer)
+        val btnSignOut: Button = findViewById<Button>(R.id.btn_Signout)
+
         imageView = findViewById(R.id.iv_avatar)
         tvName.setOnLongClickListener(longClickListener)
 
 
-        // Initialize SharedPreferences
-        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-
-        // Retrieve the user name from SharedPreferences
-        val userName = sharedPreferences.getString("userName", "")
-
-        // Display the user name in the TextView
-        tvName.text = "$userName!"
+        //Display the global name of the player
+        tvName.text = UserData.getInstance().playerName
 
         btnAppInfo.setOnClickListener {
             val intent = Intent(this, AboutApp::class.java)
@@ -62,6 +58,13 @@ class HomeScreen : AppCompatActivity() {
             val intent = Intent(this, AboutDeveloper::class.java)
             startActivity(intent)
         }
+        btnSignOut.setOnClickListener {
+            auth.signOut()
+            // Navigate to the login activity
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
 
         imageView.setOnClickListener {
             pickImageGallery()
