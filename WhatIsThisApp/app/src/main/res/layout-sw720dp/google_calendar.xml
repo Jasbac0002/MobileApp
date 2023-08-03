@@ -13,13 +13,14 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="300dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         android:orientation="vertical"
+        android:gravity="center"
         android:layout_below="@id/titleTextView">
 
         <!-- Edit Text Fields -->
