@@ -66,7 +66,7 @@ class QuizActivity : AppCompatActivity() {
                     R.drawable.fruits_kiwi,
                     "KiwiFruit",
                     "Atis",
-                    "IndianMango",
+                    "Indian Mango",
                     "Babana",
                     "KiwiFruit"
                 )
@@ -105,8 +105,8 @@ class QuizActivity : AppCompatActivity() {
                 QuestionModel(
                     R.drawable.fruit_persimmon,
                     "Suha",
+                    "KiyatKiyat",
                     "Persimmon",
-                    "Kahel",
                     "GrapeFruit",
                     "Persimmon"
                 )

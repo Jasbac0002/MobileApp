@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val registerButton: Button = findViewById<Button>(R.id.registerButton)
         val nameEditText: EditText = findViewById<EditText>(R.id.nameEditText)
         val passwordEditText: EditText = findViewById<EditText>(R.id.passwordEditText)
+
         val testingMode = 1 //if 1 set name and password for testing purposes
 
         if (testingMode == 1) {

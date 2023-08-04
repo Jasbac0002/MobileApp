@@ -117,7 +117,7 @@
 
     </LinearLayout>
 
-
+    <!-- RSS Vide Label -->
     <LinearLayout
         android:id="@+id/RSS_VideoLabels"
         android:layout_width="match_parent"
@@ -126,7 +126,10 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="390dp"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="400dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,6 +140,8 @@
             android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
+
+    <!-- RSS and play Video Buttons -->
     <LinearLayout
         android:id="@+id/rssAndGoogleCalendar"
         android:layout_width="match_parent"
@@ -146,6 +151,9 @@
         android:layout_marginTop="425dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="320dp"
         >
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -164,6 +172,8 @@
             app:srcCompat="@drawable/playvideo">
         </androidx.appcompat.widget.AppCompatImageView>
     </LinearLayout>
+
+    <!-- Google Calendar button -->
     <LinearLayout
         android:id="@+id/CalendarEvent"
         android:layout_width="match_parent"
@@ -172,7 +182,11 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="485dp"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="240dp">
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_addQuizEventCalendar"
             android:layout_width="wrap_content"
@@ -182,9 +196,11 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:background="@drawable/button_custom"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:padding="10dp"/>
     </LinearLayout>
 
+    <!-- Like Us Label -->
     <LinearLayout
         android:id="@+id/LikeUsMessage"
         android:layout_width="match_parent"
@@ -193,7 +209,10 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="550dp"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="160dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -205,6 +224,7 @@
 
     </LinearLayout>
 
+    <!-- Fb Insta Twitter Buttons -->
     <LinearLayout
         android:id="@+id/SocialImages"
         android:layout_width="match_parent"
@@ -213,7 +233,10 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="590dp"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fbImage"

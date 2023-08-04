@@ -9,7 +9,7 @@ import java.util.TimerTask
 
 class SplashActivity : AppCompatActivity() {
 
-    private val splashScreenDuration: Long = 1000 //Set Timer for  5 seconds
+    private val splashScreenDuration: Long = 2500 //Set Timer for  2.5 seconds
     private lateinit var textView: TextView
     private lateinit var dataManager: DataManager
 
