@@ -20,34 +20,6 @@
         android:layout_marginTop="50dp"/>
 
     <TextView
-        android:id="@+id/tvMark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mark Tamang"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="180dp"/>
-
-    <TextView
-        android:id="@+id/tvMew"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mew Lertbunchadee"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="150dp"/>
-
-    <TextView
         android:id="@+id/tvDevelopers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="120dp"/>
-
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -95,14 +66,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:gravity="center" >
+        android:gravity="center"
+        >
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="43dp"
-            android:paddingTop="10dp" >
+            android:paddingTop="10dp"
+            >
 
             <!-- First row -->
             <TableRow>
